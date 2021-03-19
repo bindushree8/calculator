@@ -1,73 +1,122 @@
+
 using System;
 
 namespace calculatorinterface
 {
+
+
     public interface Iinterface1
     {
-        void add(int a, int b);
-        void sub(int a, int b);
-        void mul(int a, int b);
-        void divi(double a, double b);
         void display();
     }
-    class inter : Iinterface1
+
+    class displays : Iinterface1
     {
-        int x, y, z;
-        double d;
+        public void display()
+        {
+            Console.WriteLine("hi");
+
+        }
+    }
+
+
+
+    class addition
+    {
+
         public void add(int a, int b)
         {
-            int m, n;
+            int m, n, x;
             m = a;
             n = b;
             x = m + n;
+            Console.WriteLine("Addition value is:" + x);
         }
+    }
+
+
+    class subtraction
+    {
+
         public void sub(int a, int b)
         {
-            int m, n;
+            int m, n, x;
             m = a;
             n = b;
-            y = a - b;
+            x = m - n;
+            Console.WriteLine("Subtraction value is:" + x);
         }
+    }
+
+    class multiplication
+    {
+
         public void mul(int a, int b)
         {
-            int m, n;
+            int m, n, x;
             m = a;
             n = b;
-            z = a * b;
+            x = a * b;
+            Console.WriteLine("Multiplication value is:" + x);
         }
+    }
+
+    class division
+    {
+
         public void divi(double a, double b)
         {
-            double m, n;
+            double m, n, d;
             m = a;
             n = b;
             d = a / b;
-        }
-        public void display()
-        {
-            Console.WriteLine("Addition value is:" + x);
-            Console.WriteLine("Subtraction value is:" + y);
-            Console.WriteLine("Multiplication value is:" + z);
             Console.WriteLine("Divition value is:" + d);
         }
-    }
-    class Program
-    {
-        static void Main(string[] args)
+
+
+
+
+
+        class Program
         {
-            inter obj = new inter();
-            int g, h;
+            static void Main(string[] args)
+            {
+                int g, h;
+                addition obj1 = new addition();
+
+                subtraction obj2 = new subtraction();
+
+                multiplication obj3 = new multiplication();
+
+                division obj4 = new division();
+
+                displays obj5 = new displays();
 
 
-            Console.WriteLine("Enter the first Number to perform calculator operations:");
-            g = Convert.ToInt16(Console.ReadLine());
-            Console.WriteLine("Enter the second Number to perform calculator operations:");
-            h = Convert.ToInt16(Console.ReadLine());
-            obj.add(g, h);
-            obj.sub(g, h);
-            obj.mul(g, h);
-            obj.divi(g, h);
-            obj.display();
-            Console.ReadKey();
+                Console.WriteLine("Enter the first Number to perform calculator operations:");
+                g = Convert.ToInt16(Console.ReadLine());
+                Console.WriteLine("Enter the second Number to perform calculator operations:");
+                h = Convert.ToInt16(Console.ReadLine());
+
+               
+                obj1.add(g,h);
+    
+                obj2.sub(g, h);
+                
+                obj3.mul(g, h);
+
+                obj4.divi(g, h);
+
+                obj5.display();
+
+                Console.ReadKey();
+            }
         }
     }
+
 }
+
+
+
+
+
