@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 public class Program
 {
 	public int add(int x, int y)
