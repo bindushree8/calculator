@@ -14,7 +14,7 @@ namespace calculatorinterface
     {
         public void display()
         {
-            Console.WriteLine("hi");
+            Console.WriteLine("Thank you ");
 
         }
     }
