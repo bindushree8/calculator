@@ -1,30 +1,25 @@
 
+
 using System;
 
-namespace calculatorinterface
+namespace CalculatorInterface
 {
 
 
-    public interface Iinterface1
+    public interface IInterface
     {
-        void display();
+        void Calculation(int a,int b);
+        
+
+
     }
 
-    class displays : Iinterface1
-    {
-        public void display()
-        {
-            Console.WriteLine("Thank you ");
+   
 
-        }
-    }
-
-
-
-    class addition
+    class Addition:IInterface
     {
 
-        public void add(int a, int b)
+        public void Calculation(int a, int b)
         {
             int m, n, x;
             m = a;
@@ -35,10 +30,10 @@ namespace calculatorinterface
     }
 
 
-    class subtraction
+    class Subtraction:IInterface
     {
 
-        public void sub(int a, int b)
+        public void Calculation(int a, int b)
         {
             int m, n, x;
             m = a;
@@ -48,10 +43,10 @@ namespace calculatorinterface
         }
     }
 
-    class multiplication
+    class Multiplication:IInterface
     {
 
-        public void mul(int a, int b)
+        public void Calculation(int a, int b)
         {
             int m, n, x;
             m = a;
@@ -61,10 +56,10 @@ namespace calculatorinterface
         }
     }
 
-    class division
+    class Division : IInterface
     {
 
-        public void divi(double a, double b)
+        public void Calculation(int a, int b)
         {
             double m, n, d;
             m = a;
@@ -82,15 +77,14 @@ namespace calculatorinterface
             static void Main(string[] args)
             {
                 int g, h;
-                addition obj1 = new addition();
+                Addition obj1 = new Addition();
 
-                subtraction obj2 = new subtraction();
+                Subtraction obj2 = new Subtraction();
 
-                multiplication obj3 = new multiplication();
+                Multiplication obj3 = new Multiplication();
 
-                division obj4 = new division();
+                Division obj4 = new Division();
 
-                displays obj5 = new displays();
 
 
                 Console.WriteLine("Enter the first Number to perform calculator operations:");
@@ -98,25 +92,27 @@ namespace calculatorinterface
                 Console.WriteLine("Enter the second Number to perform calculator operations:");
                 h = Convert.ToInt16(Console.ReadLine());
 
-               
-                obj1.add(g,h);
-    
-                obj2.sub(g, h);
-                
-                obj3.mul(g, h);
 
-                obj4.divi(g, h);
+                obj1.Calculation(g, h);
 
-                obj5.display();
+                obj2.Calculation(g, h);
+
+                obj3.Calculation(g, h);
+
+                obj4.Calculation(g, h);
+
+
 
                 Console.ReadKey();
             }
         }
+
+
+
+
+
     }
 
-}
-
-
-
+ }
 
 
